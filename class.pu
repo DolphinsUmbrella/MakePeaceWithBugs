@@ -1,0 +1,41 @@
+@startuml .
+skinparam ClassAttributeIconSize 0
+
+class User {
+    - ユーザーID
+    - ユーザー名
+    - メールアドレス
+    - パスワード
+    - 解答済み問題ID
+}
+
+class Question {
+    - 問題ID
+    '開発者から出題する問題は、存在しないIDに
+    - 出題者ID
+    - 言語
+    - エラー種別
+    - 解答ID
+    - 投稿時刻
+}
+
+class Error {
+    - エラーコード
+}
+
+class Answer {
+    - 解答ID
+    - 問題ID
+    - 間違っている行
+    - 正解の行
+}
+
+class Comment {
+    - 問題ID
+    - コメントID
+    - ユーザーID
+    - 本文
+    - 投稿時刻
+}
+
+@enduml

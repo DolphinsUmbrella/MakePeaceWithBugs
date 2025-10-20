@@ -1,0 +1,35 @@
+@startuml .
+
+left to right direction
+
+actor User as U
+
+rectangle MakePeaceWighBugs {
+    usecase SignUp as signup
+    usecase LogIn as login
+    usecase LogOut as logout
+    usecase Delete as delete
+    ' delete = 退会です。削除ではない
+    usecase ShowaQuestion as showQ
+    usecase SolveTheQuestion as solve
+    usecase Comment as comment
+    usecase SetMyProfile as setPro
+    ' この辺までが最低限必要な機能？
+    usecase PostQuestion as postQ
+    usecase Like as like
+    usecase Follow as follow
+}
+
+U -->signup
+U -->login
+U -->logout
+U -->delete
+U -->showQ
+U -->solve
+U -->comment
+U -->setPro
+U -->postQ
+U -->like
+U -->follow
+
+@enduml
